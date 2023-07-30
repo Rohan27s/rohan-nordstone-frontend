@@ -36,3 +36,184 @@
     transform: rotate(360deg);
   }
 }
+.navbar{
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding:10px 0;
+}
+.navbar li{
+  list-style: none;
+  cursor: pointer;
+}
+.navbar li:hover{
+  transform: scale(1.1);
+}
+.main{
+  display: flex;
+  /* padding-top: 10px; */
+  height:80vh ;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  width: auto;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  margin-top: 0;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a4845;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.auth-container button:hover {
+  background-color: #353331;
+}
+.link{
+  color: rgb(23, 96, 207);
+  cursor: pointer;
+}
+
+/* Add this CSS to your existing CSS file or create a new one and import it into the component */
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container input {
+  /* padding-right: 40px;  */
+}
+
+.toggle-password-btn {
+  position: absolute;
+  top: 42%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.password-strength-message{
+  color: red;
+}
+/* Notification.css */
+.notification-container {
+  text-align: center;
+}
+
+/* Notification.css */
+.notification-container {
+  text-align: center;
+}
+
+.red-big-button {
+  background-color: red;
+  color: white;
+  padding: 20px 65px;
+  font-size: 70px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.red-big-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Calculator.css */
+
+.calculator-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.calculator-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calculator-container div {
+  margin-bottom: 15px;
+}
+
+.calculator-container label {
+  font-weight: bold;
+}
+
+.calculator-container input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calculator-container select {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.calculator-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.calculator-container button:hover {
+  background-color: #0056b3;
+}
+
+.calculator-container p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
