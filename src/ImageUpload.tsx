@@ -5,6 +5,7 @@ import { firestore } from './firebase';
 import './ImageUpload.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FiUpload, FiCamera, FiRefreshCcw, FiX } from 'react-icons/fi';
 
 const ImageUpload = () => {
   const [image, setImage] = useState<any>(null);
@@ -150,12 +151,12 @@ const ImageUpload = () => {
         </div>
         <input type="file" onChange={handleFileChange} className="file-input" />
         <button onClick={handleUpload} className="upload-button">
-          Upload
+          <FiUpload /> Upload
         </button>
 
         {/* Add the replace image functionality */}
         <button onClick={() => setShowReplaceDialog(true)} className="replace-button">
-          {imageUrl ? 'Replace Image' : 'Select Photo'}
+          {imageUrl ? <><FiRefreshCcw /> Replace Image</> : <><FiCamera /> Select Photo</>}
         </button>
 
         {/* Modal for replace options */}
@@ -163,21 +164,21 @@ const ImageUpload = () => {
           <div className="replace-dialog">
             {!showCameraPreview && (
               <button onClick={() => { handleCameraCapture(); startCameraPreview(); }} className="capture-button">
-                Start Camera
+                <FiCamera /> Start Camera
               </button>
             )}
             {showCameraPreview && (
               <>
                 <button onClick={takePicture} className="capture-button">
-                  Capture
+                  <FiCamera /> Capture
                 </button>
               </>
             )}
             <button onClick={handleReplaceFromGallery} className="gallery-button">
-              Upload from Gallery
+              <FiUpload /> Upload from Gallery
             </button>
             <button onClick={() => setShowReplaceDialog(false)} className="cancel-button">
-              Cancel
+              <FiX /> Cancel
             </button>
           </div>
         )}

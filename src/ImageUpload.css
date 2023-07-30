@@ -85,3 +85,9 @@
 .show-camera-preview video {
   display: block;
 }
+button{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}

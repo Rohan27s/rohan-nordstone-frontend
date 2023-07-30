@@ -4,7 +4,12 @@ import { auth, firestore } from './firebase';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Login: React.FC = () => {
+interface LoginProps {
+  onLoginSuccess: () => void;
+  isLoggedIn: boolean;
+}
+const Login: React.FC<LoginProps> = ({ onLoginSuccess, isLoggedIn }) => {
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [mode, setMode] = useState<'login' | 'register' | 'forgotPassword'>('login');
@@ -13,7 +18,9 @@ const Login: React.FC = () => {
   const handleLogin = async () => {
     try {
       await auth.signInWithEmailAndPassword(email, password);
+
       toast.success('Login successful!', { position: 'top-center' });
+      onLoginSuccess();
 
     } catch (error) {
       toast.error('Error logging in:' + error, { position: 'top-center' });
