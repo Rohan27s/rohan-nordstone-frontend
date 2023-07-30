@@ -21,7 +21,7 @@ const ImageUpload = () => {
     if (e.target.files && e.target.files.length > 0) {
       const picked = e.target.files[0];
       setImage(picked);
-      setImageUrl(URL.createObjectURL(picked)); // Create a temporary URL for the selected image
+      setImageUrl(URL.createObjectURL(picked)); 
     }
   };
 
