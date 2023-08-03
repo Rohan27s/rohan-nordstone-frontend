@@ -92,7 +92,7 @@ const App: React.FC = () => {
             </>
           )}
           <li
-            className={isLoggedIn ? 'login-icon active' : 'login-icon'}
+            className={'login-icon'}
             onClick={isLoggedIn ? handleLogout : () => handleComponentChange('login')}
           >
             {isLoggedIn ? <><FiLogOut/>Logout</> : <>

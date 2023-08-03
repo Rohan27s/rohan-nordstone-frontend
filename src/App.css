@@ -126,7 +126,11 @@ p {
 .notification-container {
   text-align: center;
 }
-
+.active{
+  transform: scale(1.2);
+  text-decoration: underline;
+  font-weight: 600;
+}
 .red-big-button {
   background-color: red;
   color: white;
